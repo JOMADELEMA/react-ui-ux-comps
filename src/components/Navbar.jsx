@@ -1,22 +1,37 @@
-import React from 'react'
-import { useStateContext } from '../contexts/ContextProvider'
+import React from "react";
+import { useStateContext } from "../contexts/ContextProvider";
+import { Menu2, MoonStars, Sun } from "tabler-icons-react";
 
 const Navbar = () => {
+  const { currentMode, setMode } = useStateContext();
 
-    const { currentMode, setMode } = useStateContext();
+  return (
+    <>
+      <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16">
+        <div className="flex justify-between w-full">
+            <Menu2
+              size={30}
+              strokeWidth={2}
+              color="white"
+              className="self-center ml-5 md:hidden"
+            />
+          <span className="text-xl font-semibold dark:text-gray-50 self-center ml-2">
+            Navbar
+          </span>
+          <button
+            onClick={() => setMode(currentMode)}
+            className="p-2 h-12 self-center mr-2"
+          >
+            {currentMode === "Dark" ? (
+              <Sun color="yellow" strokeWidth={3} />
+            ) : (
+              <MoonStars color="white" strokeWidth={3} />
+            )}
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
 
-    return (
-        <>
-            <div className='dark:bg-blue-400 bg-blue-200 flex justify-between h-16'>
-                <div className='text-xl font-semibold dark:text-gray-50 self-center ml-2'>
-                    Navbar
-                </div>
-                <button onClick={() => setMode(currentMode)} className="border border-slate-800 dark:border-slate-200 rounded-lg bg-gray-200 dark:bg-gray-700 text-black dark:text-gray-200 p-2 w-40 hover:shadow-lg h-12 self-center mr-2">
-                    toggle
-                </button>
-            </div>
-        </>
-    )
-}
-
-export default Navbar
+export default Navbar;
