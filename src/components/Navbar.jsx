@@ -15,7 +15,7 @@ const Navbar = () => {
               color="white"
               className="self-center ml-5 md:hidden"
             />
-          <span className="text-xl font-semibold dark:text-gray-50 self-center ml-2">
+          <span className="text-xl font-semibold dark:text-gray-50 self-center ml-5">
             Navbar
           </span>
           <button
