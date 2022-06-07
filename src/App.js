@@ -33,7 +33,7 @@ function App() {
 
               <div className={`w-full h-full ${collapsedMenu? "ml-20" : "ml-80"}`}>
                 <Navbar />
-                <div>
+                <div className="p-5 border bg-main dark:bg-main-dark-bg">
                   <AppRouter />
                 </div>
               </div>
