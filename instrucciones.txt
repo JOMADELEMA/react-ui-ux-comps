@@ -126,6 +126,37 @@ index.js
     </BrowserRouter>
 
 
+4- otra forma de utilizar las rutas es creando un componente AppRouter
+
+4.1 importar Routes y Route de react router dom
+    import {Routes, Route } from "react-router-dom";
+
+4.2 importar las paginas en el componente
+    import {HomePage} from './HomePage';
+    import {AboutPage} from './AboutPage';
+
+4.3 exportar default la función AppRouter()
+
+    export default function AppRouter() {
+        return (
+            <Routes>
+                <Route exact path="/" element={<HomePage/>} />
+                <Route exact path="/about" element={<AboutPage/>} />
+            </Routes>
+        )
+    }
+
+4.4 en App.js importar BrowserRouter de react router dom
+    import {BrowserRouter} from 'react-router-dom';
+
+4.5 importar AppRouter 
+
+4.6 hacer uso de AppRouter dentro de BrowserRouter
+<BrowserRouter>
+    <AppRouter />
+< /BrowserRouter>
+
+
 
 ####Creación del contexto 
 1- en la ruta contexts usualmente crear el archivo que proporcionará el contexto usualmente ContextProvider.jsx
@@ -219,3 +250,27 @@ index.js
 
     -------
     {activeMenu && <Menu />}
+
+
+
+####exportar componentes desde un solo archivo 
+1- crear los jsx de las paginas a exportar en la ruta pages
+2- en la misma ruta crear un archivo index.js
+3- en el archivo index.js exportar de la siguiente forma
+
+    export {default as NombrePagina} from './NombrePagina';
+
+    ejemplo:
+    export {default as Home} from './Home';
+
+4- por ultimo solamente importarlo en el componente a utilizar
+    import {NombrePagina} from './pages';
+
+    ejemplo: 
+    import {Home} from './pages';
+
+5- utilizar como cualquier componente 
+    <Home />
+    
+
+

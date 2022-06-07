@@ -1,10 +1,14 @@
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
   return (
     <>
-      <div className="App dark">
-        <h1 className="h-screen text-black dark:text-gray-50 dark:bg-black text-3xl font-bold underline">Hola mundo</h1>
+      <div className="App">
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
       </div>
     </>
   );
