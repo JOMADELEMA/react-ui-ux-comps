@@ -3,7 +3,6 @@ import { HomePage, AboutPage, NotFoundPage } from '../pages'
 
 export default function AppRouter() {
     return (
-
         <>
             <Routes>
                 <Route exact path="/" element={<HomePage />} />
