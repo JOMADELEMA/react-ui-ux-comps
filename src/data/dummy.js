@@ -1,10 +1,12 @@
-import { User, Home, InfoCircle, QuestionMark, LayoutDashboard } from "tabler-icons-react";
+import {
+  User,
+  Home,
+  InfoCircle,
+  QuestionMark,
+  LayoutDashboard,
+} from "tabler-icons-react";
 
 export const links = [
-  {
-    title: "Dashboard",
-    links: [{ name: "Dashboard", icon: <LayoutDashboard />, path: "/dashboard" }],
-  },
   {
     title: "Information",
     links: [
@@ -13,6 +15,7 @@ export const links = [
         icon: <Home />,
         path: "/",
       },
+      { name: "Dashboard", icon: <LayoutDashboard />, path: "/dashboard" },
       {
         name: "About us",
         icon: <InfoCircle />,
