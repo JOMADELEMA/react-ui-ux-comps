@@ -217,7 +217,7 @@ index.js
 
     export const useStatecontext = () => useContext(StateContext);
 
-8- envolver el componente app con el ContextProvider
+8- envolver el componente app con el ContextProvider en el archivo index.js
 
     import {ContextProvider} from './contexts/ContextProvider';
 
