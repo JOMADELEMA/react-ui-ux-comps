@@ -7,20 +7,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16">
-        <div className="flex justify-between w-full">
-            <Menu2
-              size={30}
-              strokeWidth={2}
-              color="white"
-              className="self-center ml-5 md:hidden"
-            />
-          <span className="text-xl font-semibold dark:text-gray-50 self-center ml-5">
-            Navbar
-          </span>
+      <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16 shadow-md dark:shadow-md">
+        <div className="flex w-full">
           <button
             onClick={() => setMode(currentMode)}
-            className="p-2 h-12 self-center mr-2"
+            className="p-2 h-12 self-center ml-5"
           >
             {currentMode === "Dark" ? (
               <Sun color="yellow" strokeWidth={3} />
@@ -28,6 +19,9 @@ const Navbar = () => {
               <MoonStars color="white" strokeWidth={3} />
             )}
           </button>
+          <span className="text-xl font-semibold dark:text-gray-50 self-center text-center w-full">
+            Navbar
+          </span>
         </div>
       </div>
     </>

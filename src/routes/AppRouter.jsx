@@ -7,7 +7,7 @@ export default function AppRouter() {
             <Routes>
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
-                <Route exact path="*" element={<NotFoundPage />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </>
     )
