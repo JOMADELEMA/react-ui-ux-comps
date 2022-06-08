@@ -19,7 +19,7 @@ const ThemeSettings = () => {
           Seleccione el color de tema
         </h1>
         <div className="flex flex-col justify-around sm:justify-between sm:flex-row w-full p-5 flex-wrap">
-          <div className="flex justify-center p-1 m-1 sm:m-0 border" onClick={()=>setColor("blue")}>
+          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("blue")}>
             <div className="w-10 h-10 bg-blue-500 rounded-full cursor-pointer"></div>
           </div>
           <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("green")}>
@@ -28,8 +28,8 @@ const ThemeSettings = () => {
           <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("red")}>
             <div className="w-10 h-10 bg-red-500 rounded-full cursor-pointer"></div>
           </div>
-          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("gray")}>
-            <div className="w-10 h-10 bg-gray-500 rounded-full cursor-pointer"></div>
+          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("violet")}>
+            <div className="w-10 h-10 bg-violet-500 rounded-full cursor-pointer"></div>
           </div>
           <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("amber")}>
             <div className="w-10 h-10 bg-amber-500 rounded-full cursor-pointer"></div>

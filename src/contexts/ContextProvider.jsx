@@ -9,7 +9,7 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
 
     const [currentMode, setCurrentMode] = useState("Light");
-    const [currentColor, setCurrentColor] = useState("")
+    const [currentColor, setCurrentColor] = useState("blue")
     const [collapsedMenu, setCollapsedMenu] = useState(true);
     const [isClicked, setIsClicked] = useState(initialState);
 
@@ -20,7 +20,7 @@ export const ContextProvider = ({ children }) => {
     const setColor = (color) => {
         setCurrentColor(color);
         handleClick("themeSettings", true);
-        console.log(color);
+        // console.log(color);
     }
 
     const handleClick = (clicked, estadoActual) => {
