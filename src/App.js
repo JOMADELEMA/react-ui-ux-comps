@@ -2,8 +2,7 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./routes/AppRouter";
 import { useStateContext } from "./contexts/ContextProvider";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import {Navbar, Sidebar} from './components';
 
 function App() {
   const { currentMode, collapsedMenu } = useStateContext();

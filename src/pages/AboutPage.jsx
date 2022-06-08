@@ -1,18 +1,14 @@
 import React from "react";
+import { Contenedor } from "../components";
 
 const AboutPage = () => {
   return (
     <>
-      <div className="p-10 bg-white dark:bg-main-dark-bg shadow-sm rounded-sm dark:shadow-md">
-        <h1 className="text-black font-semibold dark:text-gray-200 text-3xl">About Us!</h1>
-
-
-        <p className="text-black dark:text-gray-400 p-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          laborum dolor necessitatibus eligendi possimus explicabo
-          reprehenderit, ad vitae ab rerum perferendis consequuntur numquam
-          eveniet molestias quis earum saepe incidunt distinctio.
-        </p>
+      <Contenedor
+        titulo="About Us"
+        fondo="bg-white dark:bg-card-darker-bg"
+        elevacion="xl"
+      >
 
         <p className="text-black dark:text-gray-400 p-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -21,7 +17,15 @@ const AboutPage = () => {
           eveniet molestias quis earum saepe incidunt distinctio.
         </p>
 
-      </div>
+        <p className="text-black dark:text-gray-400 p-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          laborum dolor necessitatibus eligendi possimus explicabo
+          reprehenderit, ad vitae ab rerum perferendis consequuntur numquam
+          eveniet molestias quis earum saepe incidunt distinctio.
+        </p>
+      </Contenedor>
+
+      
     </>
   );
 };

@@ -1,24 +1,32 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'tabler-icons-react'
+import { Contenedor } from '../components'
 
 const NotFoundPage = () => {
   return (
     <>
-    
-    <div className='p-5  bg-white rounded-sm shadow-sm dark:bg-main-dark-bg h-full dark:shadow-md' >
-    <h1 className='text-black text-3xl dark:text-gray-200'>
-      Pagina no encontrada!
-    </h1>
-    
-    <Link to="/" className='text-blue-400 dark:text-blue-200 text-xl flex p-3'>
-      <ArrowLeft />
-      Volver a Inicio
-      </Link>
 
-    </div>
-    
-    
+      <Contenedor
+        fondo="bg-white dark:bg-card-dark-bg"
+        titulo="Error 404!"
+        elevacion="md"
+      >
+        <h1 className='text-black text-2xl dark:text-gray-200 text-center'>
+          Not Found!
+        </h1>
+        <Link to="/" className='text-blue-400 dark:text-blue-200 text-xl flex p-3 w-60'>
+          <ArrowLeft />
+          Back to home
+        </Link>
+
+      </Contenedor>
+
+
+
+
+
+
     </>
   )
 }

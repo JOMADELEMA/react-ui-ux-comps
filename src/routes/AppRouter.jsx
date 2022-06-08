@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage, AboutPage, NotFoundPage } from '../pages'
+import { HomePage, AboutPage, NotFoundPage, Dashboard } from '../pages'
 
 export default function AppRouter() {
     return (
@@ -7,6 +7,7 @@ export default function AppRouter() {
             <Routes>
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </>
