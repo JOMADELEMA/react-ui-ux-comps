@@ -5,7 +5,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import {Navbar, Sidebar} from './components';
 
 function App() {
-  const { currentMode, collapsedMenu } = useStateContext();
+  const { currentMode, collapsedMenu, isClicked } = useStateContext();
 
   return (
     <>
@@ -30,7 +30,11 @@ function App() {
               )}
 
 
-              <div className={`w-full h-full ${collapsedMenu? "ml-20" : "ml-80"}`}>
+              <div className={`w-full h-full ml-20
+
+              
+
+              `}>
                 <Navbar />
                 <div className="p-5 bg-main dark:bg-main-dark-bg">
                   <AppRouter />

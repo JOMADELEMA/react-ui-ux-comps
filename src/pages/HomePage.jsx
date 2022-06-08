@@ -6,7 +6,7 @@ const Home = () => {
     <Contenedor
     fondo="bg-white dark:bg-card-dark-bg"
     titulo="Home page"
-    elevacion="xl"
+    elevacion="sm"
     //  className='p-5  bg-white dark:bg-main-dark-bg rounded-sm shadow-sm'
      >
       {/* <h1 className='text-black dark:text-gray-200 font-semibold text-3xl mb-4'>Home Page</h1> */}
