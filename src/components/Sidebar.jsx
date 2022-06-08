@@ -61,6 +61,7 @@ const Sidebar = () => {
                           key={indice}
                           to={link.path}
                           className={({isActive})=>isActive? activeLink + " justify-center":normalLink + " justify-center"}
+
                         >
                           <div className="self-center">{link.icon}</div>
                         </NavLink>
@@ -69,6 +70,9 @@ const Sidebar = () => {
                           key={indice}
                           to={link.path}
                       className={({isActive})=>isActive? activeLink:normalLink}
+                      onClick={() =>
+                        setCollapsedMenu((prevActiveMenu) => !prevActiveMenu)
+                      }
                         >
                           <div className="self-center mx-7">{link.icon}</div>
 
