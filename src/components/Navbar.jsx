@@ -6,8 +6,6 @@ import ThemeSettings from "./ThemeSettings";
 const Navbar = () => {
   const { currentMode, setMode, isClicked, handleClick } = useStateContext();
 
-  console.log(isClicked);
-
   return (
     <>
       <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16 shadow-md dark:shadow-md">

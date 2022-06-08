@@ -7,7 +7,7 @@ const AboutPage = () => {
       <Contenedor
         titulo="About Us"
         fondo="bg-white dark:bg-card-darker-bg"
-        elevacion="xl"
+        elevacion="md"
       >
 
         <p className="text-black dark:text-gray-400 p-5">

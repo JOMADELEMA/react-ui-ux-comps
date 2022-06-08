@@ -9,12 +9,19 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
 
     const [currentMode, setCurrentMode] = useState("Light");
+    const [currentColor, setCurrentColor] = useState("")
     const [collapsedMenu, setCollapsedMenu] = useState(true);
     const [isClicked, setIsClicked] = useState(initialState);
 
     const setMode = (valor) => {
         valor === 'Light' ? setCurrentMode('Dark') : setCurrentMode('Light');
     };
+
+    const setColor = (color) => {
+        setCurrentColor(color);
+        handleClick("themeSettings", true);
+        console.log(color);
+    }
 
     const handleClick = (clicked, estadoActual) => {
         setIsClicked({...initialState, [clicked]: estadoActual===true? false: true});
@@ -28,6 +35,8 @@ export const ContextProvider = ({ children }) => {
             setCollapsedMenu,
             isClicked, 
             handleClick,
+            currentColor,
+            setColor,
         }}>
             {children}
         </StateContext.Provider>

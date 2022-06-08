@@ -1,26 +1,43 @@
-import React from 'react'
-import { Contenedor } from './'
+import React from "react";
+import { Contenedor } from "./";
+
+import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSettings = () => {
-    return (
-        <div className='absolute left-32 top-12'>
 
+    const {isClicked, setColor} = useStateContext();
 
-            <Contenedor altura="h-48" ancho="w-400" fondo="bg-white dark:bg-card-dark-bg" elevacion="md">
-                <h1 className='text-black dark:text-gray-200 font-semibold text-2xl'>Seleccione el color de tema</h1>
-                
-                <div className='flex justify-between w-full p-5'>
-                    <div className='w-10 h-10 bg-blue-500 rounded-full cursor-pointer'></div>
-                    <div className='w-10 h-10 bg-green-500 rounded-full cursor-pointer'></div>
-                    <div className='w-10 h-10 bg-red-500 rounded-full cursor-pointer'></div>
-                    <div className='w-10 h-10 bg-gray-500 rounded-full cursor-pointer'></div>
-                    <div className='w-10 h-10 bg-amber-500 rounded-full cursor-pointer'></div>
-                </div>
-
-            </Contenedor>
-
+  return (
+    <div className="absolute sm:left-32 sm:top-12 top-12 left-32">
+      <Contenedor
+        altura="sm:h-48 h-auto"
+        ancho="sm:w-400 w-44"
+        fondo="bg-white dark:bg-card-dark-bg"
+        elevacion="md"
+      >
+        <h1 className="text-black dark:text-gray-200 font-semibold text-xl sm:text-2xl">
+          Seleccione el color de tema
+        </h1>
+        <div className="flex flex-col justify-around sm:justify-between sm:flex-row w-full p-5 flex-wrap">
+          <div className="flex justify-center p-1 m-1 sm:m-0 border" onClick={()=>setColor("blue")}>
+            <div className="w-10 h-10 bg-blue-500 rounded-full cursor-pointer"></div>
+          </div>
+          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("green")}>
+            <div className="w-10 h-10 bg-green-500 rounded-full cursor-pointer"></div>
+          </div>
+          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("red")}>
+            <div className="w-10 h-10 bg-red-500 rounded-full cursor-pointer"></div>
+          </div>
+          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("gray")}>
+            <div className="w-10 h-10 bg-gray-500 rounded-full cursor-pointer"></div>
+          </div>
+          <div className="flex justify-center p-1 m-1 sm:m-0" onClick={()=>setColor("amber")}>
+            <div className="w-10 h-10 bg-amber-500 rounded-full cursor-pointer"></div>
+          </div>
         </div>
-    )
-}
+      </Contenedor>
+    </div>
+  );
+};
 
-export default ThemeSettings
+export default ThemeSettings;
