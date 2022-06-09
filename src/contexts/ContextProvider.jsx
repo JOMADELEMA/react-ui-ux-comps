@@ -6,10 +6,18 @@ const initialState = {
     themeSettings: false,
 }
 
+const colors = {
+    azul: "bg-blue-400 dark:bg-blue-700", 
+    rojo: "bg-red-400 dark:bg-red-700",
+    verde: "bg-green-400 dark:bg-green-700",
+    violeta: "bg-violet-400 dark:bg-violet-700",
+    ambar: "bg-amber-400 dark:bg-amber-700",
+}
+
 export const ContextProvider = ({ children }) => {
 
     const [currentMode, setCurrentMode] = useState("Light");
-    const [currentColor, setCurrentColor] = useState("blue")
+    const [currentColor, setCurrentColor] = useState("bg-blue-400 dark:bg-blue-700")
     const [collapsedMenu, setCollapsedMenu] = useState(true);
     const [isClicked, setIsClicked] = useState(initialState);
 
@@ -18,9 +26,8 @@ export const ContextProvider = ({ children }) => {
     };
 
     const setColor = (color) => {
-        setCurrentColor(color);
+        setCurrentColor(colors[color]);
         handleClick("themeSettings", true);
-        // console.log(color);
     }
 
     const handleClick = (clicked, estadoActual) => {
