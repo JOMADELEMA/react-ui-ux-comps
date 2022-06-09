@@ -1,16 +1,32 @@
 import React from "react";
 import { useStateContext } from "../contexts/ContextProvider";
-import { Paint, MoonStars, Sun } from "tabler-icons-react";
+import { Paint, MoonStars, Sun, Menu2 } from "tabler-icons-react";
 import ThemeSettings from "./ThemeSettings";
 
 const Navbar = () => {
-  const { currentMode, setMode, isClicked, handleClick, currentColor } = useStateContext();
+  const {
+    currentMode,
+    setMode,
+    isClicked,
+    handleClick,
+    currentColor,
+    collapsedSidebar,
+    hiddenSidebar,
+    setCollapsedSidebar, 
+    hideSidebar,
+  } = useStateContext();
 
   return (
     <>
       {/* <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16 shadow-md dark:shadow-md"> */}
-      <div className={`dark:${currentColor} ${currentColor} flex align-middle h-16 shadow-md dark:shadow-md`}>
+      <div
+        className={`dark:${currentColor} ${currentColor} flex align-middle h-16 shadow-md dark:shadow-md`}
+      >
         <div className="flex w-full">
+          {/* <button onClick={()=>hideSidebar(hiddenSidebar)}>
+            <Menu2 strokeWidth={2} color="white" />
+          </button> */}
+
           <button
             onClick={() => setMode(currentMode)}
             className="p-2 h-12 self-center ml-5"
@@ -22,7 +38,13 @@ const Navbar = () => {
             )}
           </button>
           <button>
-              <Paint color="white" strokeWidth={2} onClick={() => handleClick("themeSettings", isClicked.themeSettings)}/>
+            <Paint
+              color="white"
+              strokeWidth={2}
+              onClick={() =>
+                handleClick("themeSettings", isClicked.themeSettings)
+              }
+            />
           </button>
           <span className="text-xl font-semibold dark:text-gray-50 self-center text-center w-full">
             Navbar

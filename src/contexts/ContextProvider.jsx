@@ -18,7 +18,9 @@ export const ContextProvider = ({ children }) => {
 
     const [currentMode, setCurrentMode] = useState("Light");
     const [currentColor, setCurrentColor] = useState("bg-blue-400 dark:bg-blue-700")
-    const [collapsedMenu, setCollapsedMenu] = useState(true);
+    // const [collapsedMenu, setCollapsedMenu] = useState(true);
+    const [collapsedSidebar, setCollapsedSidebar] = useState(true);
+    const [hiddenSidebar, setHiddenSidebar] = useState(true);
     const [isClicked, setIsClicked] = useState(initialState);
 
     const setMode = (valor) => {
@@ -34,12 +36,20 @@ export const ContextProvider = ({ children }) => {
         setIsClicked({...initialState, [clicked]: estadoActual===true? false: true});
     }
 
+    const hideSidebar = (isHidden) =>{
+        setHiddenSidebar(!isHidden);
+        setCollapsedSidebar(isHidden? false:true);
+    }
+
     return (
         <StateContext.Provider value={{
             currentMode,
             setMode,
-            collapsedMenu, 
-            setCollapsedMenu,
+            collapsedSidebar,
+            setCollapsedSidebar,
+            hiddenSidebar,
+            hideSidebar, 
+            setHiddenSidebar,
             isClicked, 
             handleClick,
             currentColor,
