@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
       {/* <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16 shadow-md dark:shadow-md"> */}
-      <div className={`dark:bg-${currentColor}-900 bg-${currentColor}-400 flex align-middle h-16 shadow-md dark:shadow-md`}>
+      <div className={`dark:${currentColor} ${currentColor} flex align-middle h-16 shadow-md dark:shadow-md`}>
         <div className="flex w-full">
           <button
             onClick={() => setMode(currentMode)}
