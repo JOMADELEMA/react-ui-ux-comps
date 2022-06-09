@@ -1,50 +1,52 @@
-import React from 'react'
-import { Contenedor } from '../components'
+import React from "react";
+import { Contenedor, Tarjeta } from "../components";
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Home = () => {
+
+  const {currentColor}= useStateContext();
   return (
     <Contenedor
-    fondo="bg-white dark:bg-card-dark-bg"
-    titulo="Home page"
-    elevacion="sm"
-    //  className='p-5  bg-white dark:bg-main-dark-bg rounded-sm shadow-sm'
-     >
-      {/* <h1 className='text-black dark:text-gray-200 font-semibold text-3xl mb-4'>Home Page</h1> */}
-      <p className='dark:text-gray-50 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa rerum vero labore est, qui laboriosam? Recusandae ab error et voluptatem rerum, aliquid eius. Tempore unde aliquam non libero, numquam optio.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-  
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo sapiente, non nulla, temporibus vitae incidunt id dolorem deserunt quas doloremque cupiditate eos modi, quod provident iusto culpa? Quibusdam, in.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, possimus omnis itaque officiis, et excepturi ut iure saepe fugit quos dolore illum. Dolor odio rerum tempora, velit culpa non!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit omnis molestias odio veniam maiores cumque ea asperiores ratione consectetur nisi illum optio dolor, eum autem saepe voluptatem reiciendis alias?
-      </p>
-    </Contenedor>
-  )
-}
+      titulo="Home page"
+      >
+      <h3 className="dark:text-gray-200 text-black">
+        Pagina de inicio de prueba...
+      </h3>
 
-export default Home
+      <div className="flex flex-wrap">
+        <Tarjeta
+          titulo="Ventas"
+          altura="h-40"
+          fondo="bg-white dark:bg-card-dark-bg"
+          elevacion="md"
+          ancho="w-400"
+        >
+            <p>Este es el contenido de la tarjeta</p>
+
+        </Tarjeta>
+        <Tarjeta
+          titulo="Compras"
+          altura="h-40"
+          fondo={currentColor}
+          elevacion="md"
+          ancho="w-400"
+        >
+            <p>Este es el contenido de la tarjeta</p>
+
+        </Tarjeta>
+        <Tarjeta
+          titulo="Reportes"
+          altura="h-40"
+          fondo="bg-white dark:bg-card-dark-bg"
+          elevacion="md"
+          ancho="w-400"
+        >
+            <p>Este es el contenido de la tarjeta</p>
+
+        </Tarjeta>
+      </div>
+    </Contenedor>
+  );
+};
+
+export default Home;

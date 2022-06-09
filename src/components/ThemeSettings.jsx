@@ -1,5 +1,5 @@
 import React from "react";
-import { Contenedor } from "./";
+import { Contenedor, Tarjeta } from "./";
 
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -9,7 +9,7 @@ const ThemeSettings = () => {
 
   return (
     <div className="absolute sm:left-32 sm:top-12 top-12 left-32">
-      <Contenedor
+      <Tarjeta
         altura="sm:h-48 h-auto"
         ancho="sm:w-400 w-44"
         fondo="bg-white dark:bg-card-dark-bg"
@@ -35,7 +35,7 @@ const ThemeSettings = () => {
             <div className="w-10 h-10 bg-amber-500 rounded-full cursor-pointer"></div>
           </div>
         </div>
-      </Contenedor>
+      </Tarjeta>
     </div>
   );
 };

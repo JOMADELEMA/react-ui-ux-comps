@@ -5,6 +5,7 @@ import {
   ArrowBigRightLine,
   Logout,
   User,
+  X
 } from "tabler-icons-react";
 
 import { links } from "../data/dummy";
@@ -12,7 +13,11 @@ import { links } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Sidebar = () => {
-  const { collapsedMenu, setCollapsedMenu, currentColor } = useStateContext();
+  const {
+    currentColor,
+    collapsedSidebar,
+    setCollapsedSidebar,
+  } = useStateContext();
 
   const normalLink = `flex rounded-sm cursor-pointer h-10 hover:text-black 
                       hover:dark:text-white `;
@@ -26,11 +31,11 @@ const Sidebar = () => {
         <div className="h-full flex flex-col justify-between">
           <div>
             <div className="text-3xl flex w-full justify-between h-20">
-              {collapsedMenu ? (
+              {collapsedSidebar ? (
                 <div
                   className=" flex justify-center w-full self-center "
                   onClick={() =>
-                    setCollapsedMenu((prevActiveMenu) => !prevActiveMenu)
+                    setCollapsedSidebar((prevActiveMenu) => !prevActiveMenu)
                   }
                 >
                   <ArrowBigRightLine
@@ -45,7 +50,7 @@ const Sidebar = () => {
                     className={`self-center hover:shadow-xl ${currentColor} hover:text-black hover:dark:text-white 
                     rounded-full p-3 border cursor-pointer mr-5`}
                     onClick={() =>
-                      setCollapsedMenu((prevActiveMenu) => !prevActiveMenu)
+                      setCollapsedSidebar((prevActiveMenu) => !prevActiveMenu)
                     }
                   >
                     <ArrowBigLeftLine />
@@ -59,12 +64,15 @@ const Sidebar = () => {
                 <>
                   <div key="index">
                     {item.links.map((link, indice) =>
-                      collapsedMenu ? (
+                      collapsedSidebar ? (
                         <NavLink
                           key={indice}
                           to={link.path}
-                          className={({isActive})=>isActive? activeLink + " justify-center":normalLink + " justify-center"}
-
+                          className={({ isActive }) =>
+                            isActive
+                              ? activeLink + " justify-center"
+                              : normalLink + " justify-center"
+                          }
                         >
                           <div className="self-center">{link.icon}</div>
                         </NavLink>
@@ -72,10 +80,14 @@ const Sidebar = () => {
                         <NavLink
                           key={indice}
                           to={link.path}
-                      className={({isActive})=>isActive? activeLink:normalLink}
-                      onClick={() =>
-                        setCollapsedMenu((prevActiveMenu) => !prevActiveMenu)
-                      }
+                          className={({ isActive }) =>
+                            isActive ? activeLink : normalLink
+                          }
+                          onClick={() =>
+                            setCollapsedSidebar(
+                              (prevActiveMenu) => !prevActiveMenu
+                            )
+                          }
                         >
                           <div className="self-center mx-7">{link.icon}</div>
 
@@ -98,7 +110,7 @@ const Sidebar = () => {
                 <User />
               </div>
 
-              {!collapsedMenu && (
+              {!collapsedSidebar && (
                 <div className="self-center text-xl">User Profile</div>
               )}
             </Link>
@@ -111,7 +123,7 @@ const Sidebar = () => {
                 <Logout />
               </div>
 
-              {!collapsedMenu && (
+              {!collapsedSidebar && (
                 <div className="self-center text-xl">Log Out</div>
               )}
             </Link>
