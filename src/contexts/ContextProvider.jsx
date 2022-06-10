@@ -20,7 +20,7 @@ export const ContextProvider = ({ children }) => {
     const [currentColor, setCurrentColor] = useState("bg-blue-400 dark:bg-blue-700")
     // const [collapsedMenu, setCollapsedMenu] = useState(true);
     const [collapsedSidebar, setCollapsedSidebar] = useState(true);
-    const [hiddenSidebar, setHiddenSidebar] = useState(true);
+    const [hiddenSidebar, setHiddenSidebar] = useState(false);
     const [isClicked, setIsClicked] = useState(initialState);
 
     const setMode = (valor) => {
