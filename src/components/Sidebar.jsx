@@ -34,7 +34,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="h-screen z-50 ">
+      <div className="h-screen z-50 pt-16">
         <div className="h-full flex flex-col justify-between">
           <div>
             <div className="text-3xl flex w-full justify-between h-20">
@@ -109,7 +109,7 @@ const Sidebar = () => {
           </div>
           <div className="">
 
-            <button
+            {/* <button
               onClick={() => setMode(currentMode)}
               className={`hover:text-white hover:dark:text-black 
               flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
@@ -143,7 +143,7 @@ const Sidebar = () => {
               }
             </button>
 
-            {isClicked.themeSettings && <ThemeSettings />}
+            {isClicked.themeSettings && <ThemeSettings />} */}
 
             <Link
               to="/user"
