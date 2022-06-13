@@ -1,9 +1,9 @@
 import {
-  User,
   Home,
   InfoCircle,
   QuestionMark,
   LayoutDashboard,
+  LayoutCards,
 } from "tabler-icons-react";
 
 export const links = [
@@ -16,6 +16,7 @@ export const links = [
         path: "/",
       },
       { name: "Dashboard", icon: <LayoutDashboard />, path: "/dashboard" },
+      { name: "Tarjetas", icon: <LayoutCards />, path: "/tarjetas" },
       {
         name: "About us",
         icon: <InfoCircle />,

@@ -10,17 +10,16 @@ const Navbar = () => {
     isClicked,
     handleClick,
     currentColor,
-    collapsedSidebar,
-    hiddenSidebar,
-    setCollapsedSidebar, 
-    hideSidebar,
+    // collapsedSidebar,
+    // hiddenSidebar,
+    // setCollapsedSidebar, 
+    // hideSidebar,
   } = useStateContext();
 
   return (
     <>
-      {/* <div className="dark:bg-blue-900 bg-blue-400 flex align-middle h-16 shadow-md dark:shadow-md"> */}
       <div
-        className={`dark:${currentColor} ${currentColor} flex align-middle h-16 shadow-md dark:shadow-md`}
+        className={` ${currentColor} flex align-middle h-16 shadow-md dark:shadow-md fixed w-full`}
       >
         <div className="flex w-full">
           {/* <button onClick={()=>hideSidebar(hiddenSidebar)}>
