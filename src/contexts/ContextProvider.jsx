@@ -7,6 +7,7 @@ const initialState = {
 }
 
 const colors = {
+    negro: "bg-gray-300 dark:bg-stone-700",
     azul: "bg-blue-400 dark:bg-blue-700", 
     rojo: "bg-red-400 dark:bg-red-700",
     verde: "bg-green-400 dark:bg-green-700",
@@ -17,7 +18,7 @@ const colors = {
 export const ContextProvider = ({ children }) => {
 
     const [currentMode, setCurrentMode] = useState("Light");
-    const [currentColor, setCurrentColor] = useState("bg-blue-400 dark:bg-blue-700")
+    const [currentColor, setCurrentColor] = useState("bg-gray-300 dark:bg-stone-700")
     // const [collapsedMenu, setCollapsedMenu] = useState(true);
     const [collapsedSidebar, setCollapsedSidebar] = useState(true);
     const [hiddenSidebar, setHiddenSidebar] = useState(false);

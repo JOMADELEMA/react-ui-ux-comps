@@ -5,10 +5,13 @@ import {
   ArrowBigRightLine,
   Logout,
   User,
-  X
+  Sun,
+  MoonStars,
+  Paint
 } from "tabler-icons-react";
 
 import { links } from "../data/dummy";
+import { ThemeSettings } from '../components'
 
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -17,6 +20,10 @@ const Sidebar = () => {
     currentColor,
     collapsedSidebar,
     setCollapsedSidebar,
+    currentMode,
+    isClicked,
+    handleClick,
+    setMode,
   } = useStateContext();
 
   const normalLink = `flex rounded-sm cursor-pointer h-10 hover:text-black 
@@ -27,7 +34,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="h-screen">
+      <div className="h-screen z-50 ">
         <div className="h-full flex flex-col justify-between">
           <div>
             <div className="text-3xl flex w-full justify-between h-20">
@@ -101,6 +108,43 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="">
+
+            <button
+              onClick={() => setMode(currentMode)}
+              className={`hover:text-white hover:dark:text-black 
+              flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
+            >
+              {currentMode === "Dark" ? (
+                <Sun
+                className="self-center mx-7" color="white" strokeWidth={2} />
+              ) : (
+                <MoonStars
+                className="self-center mx-7" color="black" strokeWidth={2} />
+              )}
+            </button>
+            <button
+              onClick={() =>
+                handleClick("themeSettings", isClicked.themeSettings)
+              }
+              className={`hover:text-white hover:dark:text-black 
+              flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
+            >
+              {currentMode === "Dark" ?
+                <Paint
+                className="self-center mx-7"
+                  color="white"
+                  strokeWidth={2}
+                /> :
+                <Paint
+                className="self-center mx-7"
+                  color="black"
+                  strokeWidth={2}
+                />
+              }
+            </button>
+
+            {isClicked.themeSettings && <ThemeSettings />}
+
             <Link
               to="/user"
               className={`hover:text-white hover:dark:text-black  

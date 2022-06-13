@@ -22,7 +22,7 @@ function App() {
                   ></div>
 
                   <div className={`w-full h-full ml-0`}>
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <div className="p-5 bg-main dark:bg-main-dark-bg">
                       <AppRouter />
                     </div>
@@ -38,8 +38,8 @@ function App() {
                   </div>
 
                   <div className={`w-full h-full ml-20`}>
-                    <Navbar />
-                    <div className="p-5 bg-main dark:bg-main-dark-bg">
+                    {/* <Navbar /> */}
+                    <div className=" bg-main dark:bg-main-dark-bg">
                       <AppRouter />
                     </div>
                   </div>
@@ -53,9 +53,9 @@ function App() {
                     <Sidebar />
                   </div>
 
-                  <div className={`w-full h-full ml-20`}>
-                    <Navbar />
-                    <div className="p-5 bg-main dark:bg-main-dark-bg">
+                  <div className={`w-full h-full ml-80`}>
+                    {/* <Navbar /> */}
+                    <div className=" bg-main dark:bg-main-dark-bg">
                       <AppRouter />
                     </div>
                   </div>
