@@ -21,7 +21,31 @@ const Home = () => {
         fondo="bg-main-bg dark: bg-main-dark-bg"
 
       >
-        <h3 className="dark:text-gray-200 text-black mb-2 sm:mb-10 border">
+        <h3 className="dark:text-gray-200 text-black mb-2 sm:mb-10">
+          Pagina de inicio de prueba, donde se listan los componentes propios.
+        </h3>
+
+
+      </Contenedor>
+      <Contenedor
+        titulo="Contenedor"
+        altura="h-screen flex items-center justify-center flex-col"
+        fondo="bg-main-bg dark: bg-main-dark-bg"
+
+      >
+        <h3 className="dark:text-gray-200 text-black mb-2 sm:mb-10">
+          Pagina de inicio de prueba, donde se listan los componentes propios.
+        </h3>
+
+
+      </Contenedor>
+      <Contenedor
+        titulo="Tarjetas"
+        altura="h-screen flex items-center justify-center flex-col"
+        fondo="bg-main-bg dark: bg-main-dark-bg"
+
+      >
+        <h3 className="dark:text-gray-200 text-black mb-2 sm:mb-10">
           Pagina de inicio de prueba, donde se listan los componentes propios.
         </h3>
 
