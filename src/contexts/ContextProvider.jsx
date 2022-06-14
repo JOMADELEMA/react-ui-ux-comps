@@ -4,6 +4,7 @@ const StateContext = createContext();
 
 const initialState = {
     themeSettings: false,
+    userProfile: false,
 }
 
 const colors = {

@@ -3,11 +3,12 @@ import { Contenedor } from "../components";
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="mt-20">
       <Contenedor
         titulo="About Us"
         fondo="bg-white dark:bg-card-darker-bg"
         elevacion="md"
+        
       >
 
         <p className="text-black dark:text-gray-400 p-5">
@@ -26,7 +27,7 @@ const AboutPage = () => {
       </Contenedor>
 
       
-    </>
+    </div>
   );
 };
 
