@@ -5,7 +5,7 @@ import { Contenedor } from "../components";
 
 const NotFoundPage = () => {
   return (
-    <>
+    <div className="mt-20">
       <Contenedor
         fondo="bg-white dark:bg-card-dark-bg"
         titulo="Error 404!"
@@ -23,7 +23,7 @@ const NotFoundPage = () => {
           Back to home
         </Link>
       </Contenedor>
-    </>
+    </div>
   );
 };
 

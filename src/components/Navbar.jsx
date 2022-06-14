@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useStateContext } from "../contexts/ContextProvider";
 import { Paint, MoonStars, Sun, Menu2, User, Logout } from "tabler-icons-react";
 import ThemeSettings from "./ThemeSettings";
+import UserProfile from "./UserProfile";
 
 const Navbar = () => {
   const {
@@ -11,7 +12,7 @@ const Navbar = () => {
     isClicked,
     handleClick,
     currentColor,
-    collapsedSidebar,
+    // collapsedSidebar,
     // hiddenSidebar,
     // setCollapsedSidebar,
     // hideSidebar,
@@ -55,26 +56,17 @@ const Navbar = () => {
             </span>
           </div>
           <div className="contenedor-usuario self-center flex">
-            <Link
-              to="/user"
-              className={`hover:text-white hover:dark:text-black  
-              flex rounded-sm cursor-pointer self-center mx-2
-              hover:bg-main-dark-bg hover:dark:bg-main-bg`}
-            >
-              <div className="">
-                <User color="white" />
-              </div>
-            </Link>
-            <Link
-              to="/logout"
-              className={`hover:text-white hover:dark:text-black 
-              flex rounded-sm cursor-pointer self-center mx-2 
-              hover:bg-main-dark-bg hover:dark:bg-main-bg`}
-            >
-              <div className="">
-                <Logout color="white"/>
-              </div>
-            </Link>
+          <button className="p-2 h-12 self-center mr-5">
+              <User
+                color="white"
+                strokeWidth={2}
+                onClick={() =>
+                  handleClick("userProfile", isClicked.userProfile)
+                }
+                />
+            </button>
+            {isClicked.userProfile && <UserProfile />}
+           
           </div>
         </div>
       </div>

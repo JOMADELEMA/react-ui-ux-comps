@@ -7,7 +7,7 @@ const TarjetasPage = () => {
     const {currentColor} = useStateContext();
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap mt-20">
     <Tarjeta
       titulo="Tarjeta 1"
       altura="h-96"

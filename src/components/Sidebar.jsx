@@ -107,71 +107,7 @@ const Sidebar = () => {
               ))}
             </div>
           </div>
-          <div className="">
-
-            {/* <button
-              onClick={() => setMode(currentMode)}
-              className={`hover:text-white hover:dark:text-black 
-              flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
-            >
-              {currentMode === "Dark" ? (
-                <Sun
-                className="self-center mx-7" color="white" strokeWidth={2} />
-              ) : (
-                <MoonStars
-                className="self-center mx-7" color="black" strokeWidth={2} />
-              )}
-            </button>
-            <button
-              onClick={() =>
-                handleClick("themeSettings", isClicked.themeSettings)
-              }
-              className={`hover:text-white hover:dark:text-black 
-              flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
-            >
-              {currentMode === "Dark" ?
-                <Paint
-                className="self-center mx-7"
-                  color="white"
-                  strokeWidth={2}
-                /> :
-                <Paint
-                className="self-center mx-7"
-                  color="black"
-                  strokeWidth={2}
-                />
-              }
-            </button>
-
-            {isClicked.themeSettings && <ThemeSettings />} */}
-
-            <Link
-              to="/user"
-              className={`hover:text-white hover:dark:text-black  
-              flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
-            >
-              <div className="self-center mx-7">
-                <User />
-              </div>
-
-              {!collapsedSidebar && (
-                <div className="self-center text-xl">User Profile</div>
-              )}
-            </Link>
-            <Link
-              to="/logout"
-              className={`hover:text-white hover:dark:text-black 
-              flex rounded-sm cursor-pointer h-10 hover:bg-main-dark-bg hover:dark:bg-main-bg`}
-            >
-              <div className="self-center mx-7">
-                <Logout />
-              </div>
-
-              {!collapsedSidebar && (
-                <div className="self-center text-xl">Log Out</div>
-              )}
-            </Link>
-          </div>
+          
         </div>
       </div>
     </>
