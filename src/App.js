@@ -39,7 +39,7 @@ function App() {
 
                   <div className={`w-full h-full ml-0`}>
                     <Navbar />
-                    <div className=" bg-main dark:bg-main-dark-bg ml-20">
+                    <div className=" bg-main-bg dark:bg-main-dark-bg ml-20">
                       <AppRouter />
                     </div>
                   </div>

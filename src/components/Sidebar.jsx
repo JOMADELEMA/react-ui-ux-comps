@@ -3,15 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 import {
   ArrowBigLeftLine,
   ArrowBigRightLine,
-  Logout,
-  User,
-  Sun,
-  MoonStars,
-  Paint
 } from "tabler-icons-react";
 
 import { links } from "../data/dummy";
-import { ThemeSettings } from '../components'
 
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -20,14 +14,11 @@ const Sidebar = () => {
     currentColor,
     collapsedSidebar,
     setCollapsedSidebar,
-    currentMode,
-    isClicked,
-    handleClick,
-    setMode,
+    hoverColor,
   } = useStateContext();
 
-  const normalLink = `flex rounded-sm cursor-pointer h-10 hover:text-black 
-                      hover:dark:text-white `;
+  const normalLink = `flex rounded-sm cursor-pointer h-10 
+                      ${hoverColor}`;
 
   const activeLink = `flex rounded-sm cursor-pointer h-10 ${currentColor}
                       text-black dark:text-white hover:text-white hover:dark:text-black `;
@@ -46,7 +37,7 @@ const Sidebar = () => {
                   }
                 >
                   <ArrowBigRightLine
-                    className={`rounded-full border w-12 h-12 p-3 hover:shadow-xl 
+                    className={`rounded-full w-12 h-12 p-3 hover:shadow-xl 
                   ${currentColor} hover:text-black hover:dark:text-white cursor-pointer`}
                   />
                 </div>
@@ -55,7 +46,7 @@ const Sidebar = () => {
                   <div className="self-center ml-5">Sidebar</div>
                   <div
                     className={`self-center hover:shadow-xl ${currentColor} hover:text-black hover:dark:text-white 
-                    rounded-full p-3 border cursor-pointer mr-5`}
+                    rounded-full p-3 cursor-pointer mr-5`}
                     onClick={() =>
                       setCollapsedSidebar((prevActiveMenu) => !prevActiveMenu)
                     }
@@ -107,7 +98,7 @@ const Sidebar = () => {
               ))}
             </div>
           </div>
-          
+
         </div>
       </div>
     </>
